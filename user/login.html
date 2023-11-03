@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login Page</title>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="../css/user/login.css">
+
+    <!--boxIcons css file link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo">Travel Planning System (Next Travel Pvt. Ltd - Kalutara)</a>
+
+        <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" placeholder="Search Travel Plans..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_box"></button>
+        </form>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+        <!--profile section design start-->
+        <div class="profile">
+            <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+            <h3>Kaveen Sewhan</h3>
+            <span>Traveler</span>
+            <a href="profile.html" class="btn">View Profile</a>
+            <div class="flex-btn">
+                <a href="login.html" class="option-btn">Login</a>
+                <a href="register.html" class="option-btn">Registration</a>
+            </div>
+        </div>
+        <!--profile section design end-->
+    </section>
+</header>
+
+<!--side bar section design start-->
+<div class="side-bar">
+
+    <div class="close-side-bar">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="profile">
+        <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+        <h3>Kaveen Sewhan</h3>
+        <span>T00-001</span>
+        <a href="profile.html" class="btn">View Profile</a>
+    </div>
+
+    <div class="navbar">
+        <a href="../user/dashboard.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a href="../pages/customerDetails.html"> <i class="fas fa-user"></i> <span>Customer Details</span> </a>
+        <a href="../pages/packageDetails.html"> <i class="fas fa-hiking"></i> <span>Package Details</span> </a>
+        <a href="../pages/hotelDetails.html"> <i class="fas fa-hotel"></i> <span>Hotel Details</span> </a>
+        <a href="../pages/vehicleDetails.html"> <i class="fas fa-car"></i> <span>Vehicle Details</span> </a>
+        <a href="../pages/guideDetails.html"> <i class="fas fa-bullhorn"></i> <span>Guide Details</span> </a>
+        <a href="../pages/travelBooking.html"> <i class="fas fa-book"></i> <span>Travel Booking</span> </a>
+        <a href="../index.html" class="btn">Logout</a>
+    </div>
+</div>
+<!--side bar section design end-->
+
+<!--user register section design start-->
+<section class="form-container">
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <h3>User Login Form</h3>
+
+        <label>User Name</label>
+        <input type="text" name="text" placeholder="Enter User Name" maxlength="50" class="box" required>
+
+        <label>User Password</label>
+        <input type="password" name="password" placeholder="Enter User Password" maxlength="50" class="box" required>
+
+        <input type="submit" name="submit" value="Login Now" class="inline-btn">
+    </form>
+</section>
+<!--user register section design end-->
+
+<!--footer section design start-->
+<footer class="footer">
+    &copy;Copyright @ 2023 by <span>Kaveen Sewhan</span> | All Rights Reserved!
+</footer>
+<!--footer section design end-->
+
+<!--custom js file link-->
+<script src="../js/user/profile.js"></script>
+</body>
+</html>

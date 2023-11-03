@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Details Form</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="../css/pages/pagesStyles.css">
+
+    <!--boxIcons css file link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--add css bootstrap framework-->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+</head>
+<body>
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo">Travel Planning System (Next Travel Pvt. Ltd - Kalutara)</a>
+
+        <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" placeholder="Search Travel Plans..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_box"></button>
+        </form>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+        <!--profile section design start-->
+        <div class="profile">
+            <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+            <h3>Kaveen Sewhan</h3>
+            <span>Traveler</span>
+            <a href="../user/profile.html" class="btn">View Profile</a>
+            <div class="flex-btn">
+                <a href="../index.html" class="option-btn">Login</a>
+                <a href="../user/register.html" class="option-btn">Registration</a>
+            </div>
+        </div>
+        <!--profile section design end-->
+    </section>
+</header>
+
+<!--side bar section design start-->
+<div class="side-bar">
+
+    <div class="close-side-bar">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="profile">
+        <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+        <h3>Kaveen Sewhan</h3>
+        <span>T00-001</span>
+        <a href="../user/profile.html" class="btn">View Profile</a>
+    </div>
+
+    <div class="navbar">
+        <a href="../user/dashboard.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a href="../pages/customerDetails.html"> <i class="fas fa-user"></i> <span>Customer Details</span> </a>
+        <a href="../pages/packageDetails.html"> <i class="fas fa-hiking"></i> <span>Package Details</span> </a>
+        <a href="../pages/hotelDetails.html"> <i class="fas fa-hotel"></i> <span>Hotel Details</span> </a>
+        <a href="../pages/vehicleDetails.html"> <i class="fas fa-car"></i> <span>Vehicle Details</span> </a>
+        <a href="../pages/guideDetails.html"> <i class="fas fa-bullhorn"></i> <span>Guide Details</span> </a>
+        <a href="../pages/travelBooking.html"> <i class="fas fa-book"></i> <span>Travel Booking</span> </a>
+        <a href="../index.html" class="btn">Logout</a>
+    </div>
+</div>
+<!--side bar section design end-->
+
+<!--Vehicle Manage Content-->
+<main id="vehicleContent">
+    <section class="container">
+        <div class="rounded-3 p-3" style="background-color: darkgrey; margin-top: 25px; height: 100%; width:100%">
+            <h1 class="text-lg-start mb-3"><i class="fas fa-car"></i>Vehicle Details Form</h1>
+            <div class="row align-items-start pb-5"></div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtVehicleId">Vehicle ID :</label>
+                        <input class="form-control" id="txtVehicleId" type="text" placeholder="Vehicle ID">
+                        <span class="control-error" id="lblVehicleID"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtVehicleBrand">Vehicle Brand :</label>
+                        <select name="vehicleBrand" id="txtVehicleBrand">
+                            <option value="vehicleBrand">Select Vehicle Brand</option>
+                            <option value="nissanCaravan">Nissan Caravan</option>
+                            <option value="suzukiCelerio">Suzuki Celerio</option>
+                            <option value="toyotaAlphard">Toyota Alphard</option>
+                            <option value="toyotaCoaster">Toyota Coaster</option>
+                            <option value="toyotaYaris">Toyota Yaris</option>
+                            <option value="toyotaPrado-VX-V8">Toyota Prado-VX-V8</option>
+                        </select>
+                        <span class="control-error" id="lblVehicleBrand"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtVehicleCategory">Vehicle Category :</label>
+                        <select name="vehicleCategory" id="txtVehicleCategory">
+                            <option value="vehicleCategory">Select Vehicle Category</option>
+                            <option value="economy">Economy Package</option>
+                            <option value="midRange">Mid-Range Package</option>
+                            <option value="luxury">Luxury Package</option>
+                            <option value="superLuxury">Super Luxury Package</option>
+                        </select>
+                        <span class="control-error" id="lblVehicleCategory"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0">Select Vehicle Fuel Type :</label>
+                        <input name="fuelType" type="radio" value="petrol"> Petrol
+                        <input name="fuelType" type="radio" value="diesel"> Diesel
+                        <span class="control-error" id="lblFuelType"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0">Hybrid or Non-Hybrid :</label>
+                        <input name="type" type="radio" value="hybrid"> Hybrid
+                        <input name="type" type="radio" value="nonHybrid"> Non-Hybrid
+                        <span class="control-error" id="lblType"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtFuelUsage">Vehicle Fuel Usage (km/l) :</label>
+                        <input class="form-control" id="txtFuelUsage" type="number" placeholder="Vehicle Fuel Usage">
+                        <span class="control-error" id="lblFuelUsage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtVehicleImage">Vehicle Image :</label>
+                        <input class="form-control" id="txtVehicleImage" type="file" value="images/*">
+                        <span class="control-error" id="lblVehicleImage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtSeatCapacity">Vehicle Seat Capacity (Exclude Driver) :</label>
+                        <input class="form-control" id="txtSeatCapacity" type="number" placeholder="Vehicle Seat Capacity">
+                        <span class="control-error" id="lblSeatCapacity"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtVehicleType">Vehicle Type :</label>
+                        <select name="vehicleType" id="txtVehicleType">
+                            <option value="vehicleFuelType">Select Vehicle Type</option>
+                            <option value="car">Car</option>
+                            <option value="van">Van - (7-12 seats)</option>
+                            <option value="suv">SUV</option>
+                            <option value="bus">Bus - (30-40 seats)</option>
+                        </select>
+                        <span class="control-error" id="lblVehicleType"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0">Select Vehicle Transmission Type :</label>
+                        <input name="transmissionType" type="radio" value="auto"> Auto
+                        <input name="transmissionType" type="radio" value="manual"> Manual
+                        <span class="control-error" id="lblTransmissionType"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideName">Guide Name :</label>
+                        <input class="form-control" id="txtGuideName" type="text" placeholder="Guide Name">
+                        <span class="control-error" id="lblGuideName"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideContactNo">Guide Contact No :</label>
+                        <input class="form-control" id="txtGuideContactNo" type="number" placeholder="Guide Contact No">
+                        <span class="control-error" id="lblGuideContactNo"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtLicenseImage">Guide license Scanned Image :</label>
+                        <input class="form-control" id="txtLicenseImage" type="file" value="images/*">
+                        <span class="control-error" id="lblLicenseImage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtVehicleRemarks">Vehicle Remarks (any Special Needs, Illnesses, etc.) :</label>
+                        <input class="form-control" id="txtVehicleRemarks" type="text" placeholder="Vehicle Remarks">
+                        <span class="control-error" id="lblVehicleRemarks"></span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button class="btn btn-primary mt-3" data-bs-target="#newPackage"
+                        data-bs-toggle="modal" id="btnSavePackage">Save Package
+                </button>
+                <button class="btn btn-warning mt-3" id="btnGetAllPackages">View All Packages</button>
+                <button class="btn btn-success mt-3" data-bs-target="#updatePackage"
+                        data-bs-toggle="modal" id="btnUpdatePackage">Update Package
+                </button>
+                <button class="btn btn-danger mt-3" data-bs-target="#deletePackage"
+                        data-bs-toggle="modal" id="btnDeletePackage">Delete Package
+                </button>
+                <button class="btn btn-secondary mt-3" data-bs-target="#clearPackage"
+                        data-bs-toggle="modal" id="btnClearPackage">Clear Package
+                </button>
+            </div>
+
+            <h3 id="CustomerDetailsContent" class="text-center lead display-4 m-4 text-black">TRAVEL VEHICLE DETAILS</h3>
+            <div class="row align-items-center">
+                <div class="col-12 mt-2">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Vehicle ID</th>
+                            <th scope="col">Vehicle Brand</th>
+                            <th scope="col">Vehicle Category</th>
+                            <th scope="col">Fuel Type (Diesel/Petrol)</th>
+                            <th scope="col">Hybrid or Non-Hybrid</th>
+                            <th scope="col">Fuel usage (km/l)</th>
+                            <th scope="col">Vehicle Image</th>
+                            <th scope="col">Vehicle Seat Capacity (Exclude Driver)</th>
+                            <th scope="col">Vehicle Type(Car,Bus,Van)</th>
+                            <th scope="col">Transmission Type(Auto/Manual)</th>
+                            <th scope="col">Guide Name</th>
+                            <th scope="col">Guide Contact No</th>
+                            <th scope="col">Guide License Scanned Image</th>
+                            <th scope="col">Vehicle Remarks</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblVehicleDetails">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--footer section design start-->
+<footer class="footer">
+    &copy;Copyright @ 2023 by <span>Kaveen Sewhan</span> | All Rights Reserved!
+</footer>
+<!--footer section design end-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>-->
+
+<script src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+
+<!--custom js file link-->
+<script src="../js/user/dashboard.js"></script>
+</body>
+</html>

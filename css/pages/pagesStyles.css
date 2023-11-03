@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap');
+
+:root {
+    --main-color:#8e44ad;
+    --red:#e74c3c;
+    --orange:#f39c12;
+    --white:#fff;
+    --black:#2c3e50;
+    --black-color:#222;
+    --light-color:#888;
+    --light-bg:#eee;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--light-bg);
+    padding-left: 30rem;
+}
+
+/* dark mode active */
+body.dark {
+    --white:#222;
+    --black:#fff;
+    --light-color:#aaa;
+    --light-bg:#333;
+    --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active {
+    padding-left: 0;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    /*background-color: var(--light-color);*/
+    background-color: #333;
+    border-bottom: var(--border);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .flex {
+    padding: 1.5rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.header .flex .logo {
+    font-size: 2.5rem;
+    color: var(--orange);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.header .flex .search-form {
+    /*width: 50rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--light-bg);*/
+
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    width: auto;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    background-color: var(--white);
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    transition: .2s linear;
+}
+
+.header .flex .search-form input {
+    width: 100%;
+    background: none;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.header .flex .search-form button {
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.header .flex .search-form button:hover {
+    color: var(--orange);
+}
+
+.header .flex .icons div {
+    font-size: 2rem;
+    /*color: var(--black);*/
+    color: var(--light-color);
+    border-radius: .5rem;
+    height: 4.5rem;
+    cursor: pointer;
+    width: 4.5rem;
+    line-height: 4.4rem;
+    background-color: var(--light-bg);
+    text-align: center;
+    margin-left: .5rem;
+}
+
+.header .flex .icons div:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+#search-btn {
+    /*display: none;*/
+    display: inline-block;
+}
+
+/*#search-btn {
+    display: inline-block;
+}*/
+
+/*.header .flex .search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    width: auto;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    background-color: var(--white);
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    transition: .2s linear;
+}*/
+
+.header .flex .search-form.active {
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+
+/* profile section design start */
+.header .flex .profile {
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    width: 30rem;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: .2s linear;
+}
+
+.header .flex .profile.active {
+    transform: scale(1);
+}
+
+.header .flex .profile img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+
+.header .flex .profile h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.header .flex .profile p {
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.btn,
+.option-btn,
+.delete-btn {
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+    display: inline-block;
+    text-align: center;
+}
+
+.btn,
+.inline-btn {
+    background-color: var(--orange);
+}
+
+.option-btn,
+.inline-option-btn {
+    background-color: var(--orange);
+}
+
+.delete-btn,
+.inline-delete-btn {
+    background-color: var(--red);
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover {
+    /*background-color: var(--black);
+    color: var(--white);*/
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+}
+
+.flex-btn {
+    display: flex;
+    gap: 1rem;
+}
+/* profile section design end */
+
+/* side bar section design start */
+.side-bar {
+    /*position: fixed;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*height: 100vh;*/
+    height: 100vh;
+    width: 30rem;
+    background-color: var(--white);
+    border-right: var(--border);
+    /*transition: .2s linear;*/
+    z-index: 1200;
+}
+
+.side-bar .close-side-bar {
+    text-align: right;
+    padding: 2rem;
+    padding-bottom: 0;
+    /*display: inline-block;*/
+    display: block;
+}
+
+.side-bar .close-side-bar i {
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.4rem;
+    font-size: 2.5rem;
+    color: #222;
+    background-color: var(--orange);
+    cursor: pointer;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.side-bar .profile {
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    bottom: 9rem;
+}
+
+.side-bar .profile img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+
+.side-bar.profile h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.side-bar .profile span {
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.side-bar .navbar {
+    position: relative;
+    bottom: 6rem;
+}
+
+.side-bar .navbar a {
+    display: block;
+    padding: 1rem;
+    /*margin: .5rem 0;*/
+    font-size: 1.8rem;
+    position: relative;
+    bottom: 7rem;
+    text-decoration: none;
+}
+
+.side-bar .navbar .btn:hover {
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+}
+
+.side-bar .navbar a i {
+    margin-right: 1.5rem;
+    color: var(--orange);
+    transition: .2s linear;
+}
+
+.side-bar .navbar a span {
+    color: var(--light-color);
+}
+
+.side-bar .navbar a:hover {
+    background-color: var(--light-bg);
+}
+
+.side-bar .navbar a:hover i {
+    margin-right: 2.5rem;
+}
+
+.side-bar.active {
+    left: -31rem;
+}
+/* side bar section design end */
+
+.heading {
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+    display: inline-block;
+}
+
+.heading span .space {
+    background: none;
+}
+
+.submitBtn {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+
+.submitBtn:hover {
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+}
+
+/* about us section design start */
+.about .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about .row .content h2 {
+    font-size: 22px;
+    color: var(--orange);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about .row .content p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #222;
+    margin-bottom: 35px;
+}
+/* about us section design end */
+
+/* services section design start */
+.services .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.services .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.services .box-container .box i {
+    padding: 1rem;
+    font-size: 5rem;
+    color: var(--orange);
+}
+
+.services .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.services .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.services .box-container .box:hover {
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+/* services section design end */
+
+/* footer section design start */
+.footer {
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: var(--black);
+    font-size: 2rem;
+    margin-top: 65rem;
+    z-index: 1000;
+}
+
+.footer span {
+    color: var(--orange);
+}
+/* footer section design end */
+
+/* media queries design start */
+@media (max-width: 1200px) {
+    body {
+        padding-left: 0;
+    }
+
+    .side-bar {
+        transition: .2s linear;
+        left: -30rem;
+    }
+
+    .side-bar.active {
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    #search-btn {
+        display: inline-block;
+    }
+
+    .header .flex .search-form {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        width: auto;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: var(--white);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+        transition: .2s linear;
+    }
+
+    .header .flex .search-form.active {
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+/* media queries design end */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #888 60%, #888 40.1%);
+}
+
+.container form{
+    padding:20px;
+    width:500px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+}
+
+.container form .row .col{
+    flex:1 1 250px;
+}
+
+.container form .row .col .title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+    margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container form .row .col .inputBox input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+    border:1px solid #000;
+}
+
+.container form .row .col .flex{
+    display: flex;
+    gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+    margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: #f39c12;
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5rem;
+    text-align: center;
+}
+
+.container form .submit-btn:hover{
+    background: #f39c12;
+}

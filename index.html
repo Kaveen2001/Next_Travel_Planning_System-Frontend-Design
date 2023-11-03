@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planning System</title>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--custom media queries css file link-->
+    <link rel="stylesheet" href="css/mediaQuery.css">
+
+    <!--boxIcons css file link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--aos scroll library add-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--&lt;!&ndash;css bootstrap framework add&ndash;&gt;
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">-->
+
+</head>
+
+<body>
+
+    <!--header section design start-->
+    <header id="header">
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>N</span>e<span>x</span>t <span>T</span>r<span>a</span>v<span>e</span>l</a>
+
+        <nav class="navbar">
+            <a id="linkHomePage" href="#home">Home</a>
+            <a id="linkAboutUs" href="#about">About Us</a>
+            <a id="linkServices" href="#services">Services</a>
+            <a id="linkTravelPlan" href="#pricing">Travel Plans</a>
+            <a id="linkDestinations" href="#gallery">Destinations</a>
+            <a id="linkHotels" href="#hotels">Hotels</a>
+            <a id="linkVehicles" href="#vehicles">Vehicles</a>
+            <a id="linkTravelBook" href="#book">Book</a>
+            <a id="linkContactUs" href="#contact">Contact Us</a>
+        </nav>
+
+        <div class="content">
+            <a href="#" class="submitBtn">Login</a>
+        </div>
+
+    </header>
+    <!--header section design end-->
+
+    <!--login form & register form section design start-->
+        <div class="wrapper" id="wrapper">
+            <span class="icon-close">
+                <i class='bx bx-x'></i>
+            </span>
+            <div class="logreg-box">
+
+                <!--login form section design start-->
+                <div class="form-box-login" data-aos="zoom-in" data-aos-delay="600" id="login">
+                    <div class="logreg-title">
+                        <h2>Login Form</h2>
+                        <p>Please login to use the System.</p>
+                    </div>
+
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user'></i></span>
+                            <input type="text" required>
+                            <label>User Name</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                            <input type="password" required>
+                            <label>User Password</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember Me</label>
+                            <a href="#">Forgot Password ?</a>
+                        </div>
+
+                        <button type="submit" class="logBtn"><a href="user/dashboard.html">Login</a></button>
+
+                        <div class="logreg-link">
+                            <p>Don't have an account ? <a href="#register" class="register-link">Register Now</a></p>
+                        </div>
+                    </form>
+                </div>
+                <!--login form section design end-->
+
+                <!--media options design start-->
+                <div class="media-options">
+                    <a href="#">
+                        <i class='bx bxl-google'></i>
+                        <span>Login with Google</span>
+                    </a>
+                    <a href="#">
+                        <i class='bx bxl-facebook-circle'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+                <!--media options design end-->
+
+                <!--registration form section design start-->
+                <div class="form-box-register" id="register">
+                    <div class="logreg-title">
+                        <h2>Registration Form</h2>
+                        <p>Please provide the following to verify your identity.</p>
+                    </div>
+
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user'></i></span>
+                            <input type="text" required>
+                            <label>User Name</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope'></i></span>
+                            <input type="email" required>
+                            <label>User Email Address</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                            <input type="password" required>
+                            <label>User Password</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I agree to the terms & conditions</label>
+                        </div>
+
+                        <button type="submit" class="logBtn"><a href="#login">Register</a></button>
+
+                        <div class="logreg-link">
+                            <p>Don't have an account ? <a href="#login" class="login-link">Login Now</a></p>
+                        </div>
+                    </form>
+                </div>
+                <!--registration form section design end-->
+            </div>
+        </div>
+    <!--login form & register form section design start-->
+
+    <!--home section design start-->
+    <section class="home" id="home">
+
+        <div class="content">
+            <!--<h3>Welcome to Travel Planning System</h3>-->
+            <h3 data-aos="flip-left">Next Travel Pvt. Ltd - Kalutara</h3>
+            <!--<p>Discover New places with us, Adventure Awaits</p>-->
+            <p data-aos="flip-left">Welcome to Sri Lanka Paradise, Visit to Sri Lanka</p>
+            <a href="#book" class="btn">Book Travel Plan</a>
+        </div>
+
+        <div class="video-container">
+            <video src="assets/mp4/srilanka.mp4" id="video" loop autoplay></video>
+        </div>
+    </section>
+    <!--home section design end-->
+
+    <!--about us section design start-->
+    <section class="about" id="about">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>A</span>
+            <span>b</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+            <span class="space"></span>
+            <span>U</span>
+            <span>s</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image" data-aos="fade-right">
+                <img src="assets/images/logo/travelbook.jpg" alt="travelbook.jpg">
+            </div>
+
+            <div class="content" data-aos="fade-left">
+                <h2>Next Travel Pvt. Ltd - Kalutara</h2>
+                <p>Next Travel Pvt Ltd. is a company that plans travel specializing in a local scale. They have 30 registered
+                    hotels and 60 registered vehicles to offer better services. These services are exposed as package based, and anyone can select one of the packages based on their preferences. The company is popular
+                    in their domain because of their loyal service and gets the huge responsibility for seeking a good place
+                    with transport mechanism for someone's travel. </p>
+                <a href="#" class="submitBtn">Read More</a>
+            </div>
+
+        </div>
+    </section>
+    <!--about us section design end-->
+
+    <!--service section design start-->
+    <section class="services" id="services">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>O</span>
+            <span>u</span>
+            <span>r</span>
+            <span class="space"></span>
+            <span>S</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="zoom-in">
+                <i class="fas fa-hotel"></i>
+                <h3>Affordable Hotels</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                    Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in">
+                <i class="fas fa-utensils"></i>
+                <h3>Food & Drinks</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                    Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Safety Guide</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                    Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in">
+                <i class="fas fa-globe-asia"></i>
+                <h3>Around The Country</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                    Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in">
+                <i class="fas fa-car"></i>
+                <h3>Fastest Travel</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                    Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in">
+                <i class="fas fa-hiking"></i>
+                <h3>Adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                    Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+            </div>
+        </div>
+
+    </section>
+    <!--service section design end-->
+
+    <!--travel plans section design start-->
+    <section class="pricing" id="pricing">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>O</span>
+            <span>u</span>
+            <span>r</span>
+            <span class="space"></span>
+            <span>T</span>
+            <span>r</span>
+            <span>a</span>
+            <span>v</span>
+            <span>e</span>
+            <span>l</span>
+            <span class="space"></span>
+            <span>P</span>
+            <span>l</span>
+            <span>a</span>
+            <span>n</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container" data-aos="flip-right">
+            <div class="box">
+                <h3>Regular Package</h3>
+                <div class="price">
+                    <span class="amount">LKR.25000</span>
+                    <span>/More</span>
+                </div>
+                <ul>
+                    <li>7 Days</li>
+                    <li>Food & Drinks</li>
+                    <li>Safety Guide</li>
+                    <li>Insurance</li>
+                    <li>Economy Vehicle</li>
+                    <li>3 Star & 2 Star Hotels</li>
+                </ul>
+                <a href="#" class="submitBtn">Choose Plan</a>
+            </div>
+        </div>
+
+        <div class="box-container" data-aos="flip-right">
+            <div class="box">
+                <h3>Mid-Level Package</h3>
+                <div class="price">
+                    <span class="amount">LKR.50000</span>
+                    <span>/More</span>
+                </div>
+                <ul>
+                    <li>7 Days</li>
+                    <li>Food & Drinks</li>
+                    <li>Safety Guide</li>
+                    <li>Insurance</li>
+                    <li>Mid-Range Vehicle</li>
+                    <li>3 Star & 4 Star Hotels</li>
+                </ul>
+                <a href="#" class="submitBtn">Choose Plan</a>
+            </div>
+        </div>
+
+        <div class="box-container" data-aos="flip-right">
+            <div class="box">
+                <h3>Luxury Package</h3>
+                <div class="price">
+                    <span class="amount">LKR.75000</span>
+                    <span>/More</span>
+                </div>
+                <ul>
+                    <li>7 Days</li>
+                    <li>Food & Drinks</li>
+                    <li>Safety Guide</li>
+                    <li>Insurance</li>
+                    <li>Luxury Vehicle</li>
+                    <li>4 Star & 5 Star Hotels</li>
+                </ul>
+                <a href="#" class="submitBtn">Choose Plan</a>
+            </div>
+        </div>
+
+        <div class="box-container" data-aos="flip-right">
+            <div class="box">
+                <h3>Super Luxury Package</h3>
+                <div class="price">
+                    <span class="amount">LKR.100000</span>
+                    <span>/More</span>
+                </div>
+                <ul>
+                    <li>7 Days</li>
+                    <li>Food & Drinks</li>
+                    <li>Safety Guide</li>
+                    <li>Insurance</li>
+                    <li>Super Luxury Vehicle</li>
+                    <li>5 Star Hotels</li>
+                </ul>
+                <a href="#" class="submitBtn">Choose Plan</a>
+            </div>
+        </div>
+    </section>
+    <!--travel plans section design end-->
+
+    <!--destinations section design start-->
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>D</span>
+            <span>e</span>
+            <span>s</span>
+            <span>t</span>
+            <span>i</span>
+            <span>n</span>
+            <span>a</span>
+            <span>t</span>
+            <span>i</span>
+            <span>o</span>
+            <span>n</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/kandy.jpeg" alt="kandy.jpeg">
+                <div class="content">
+                    <h3>Kandy</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/upcountry.jpeg" alt="upcountry.jpeg">
+                <div class="content">
+                    <h3>Upcountry</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/Eastern%20Coast.jpeg" alt="Eastern%20Coast.jpeg">
+                <div class="content">
+                    <h3>Eastern Coast</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/colombo.jpeg" alt="colombo.jpeg">
+                <div class="content">
+                    <h3>Capital Colombo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/westcoast.jpeg" alt="westcoast.jpeg">
+                <div class="content">
+                    <h3>Western Coast</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/northpeninsula.jpeg" alt="northpeninsula.jpeg">
+                <div class="content">
+                    <h3>North Peninsula</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/downsouth.jpeg" alt="downsouth.jpeg">
+                <div class="content">
+                    <h3>Down South</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/sigiriya.jpeg" alt="sigiriya.jpeg">
+                <div class="content">
+                    <h3>Sigiriya</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/dabulla.jpeg" alt="dabulla.jpeg">
+                <div class="content">
+                    <h3>Dambulla</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/anuradhapura.jpeg" alt="anuradhapura.jpeg">
+                <div class="content">
+                    <h3>Anuradhapura</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/polonnaruwa.jpeg" alt="polonnaruwa.jpeg">
+                <div class="content">
+                    <h3>Polonnaruwa</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/travel/matale.jpeg" alt="matale.jpeg">
+                <div class="content">
+                    <h3>Matale</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                        Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+                    <a href="#" class="seeMoreBtn">See More</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--destinations section design end-->
+
+    <!--hotel section design start-->
+    <section class="hotels" id="hotels">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>O</span>
+            <span>u</span>
+            <span>r</span>
+            <span class="space"></span>
+            <span>H</span>
+            <span>o</span>
+            <span>t</span>
+            <span>e</span>
+            <span>l</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/h1.jpg" alt="h1.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Blue Water Hotel - Wadduwa</h3>
+                    <p>Option 01 - LKR.60000</p>
+                    <p>Option 02 - LKR.40000</p>
+                    <p>Option 03 - LKR.80000</p>
+                    <p>Option 04 - LKR.75000</p>
+                    <p>Luxury / Super Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.40000 <span>LKR.80000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/h2.jpg" alt="h2.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Hikka Tranz - Hikkaduwa</h3>
+                    <p>Option 01 - LKR.46000</p>
+                    <p>Option 02 - LKR.38000</p>
+                    <p>Option 03 - LKR.55000</p>
+                    <p>Option 04 - LKR.50000</p>
+                    <p>Mid-Level / Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">LKR.38000 <span>LKR.50000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/h3.jpg" alt="h3.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Heritage Hotel - Anuradhapura</h3>
+                    <p>Option 01 - LKR.10500</p>
+                    <p>Option 02 - LKR.9000</p>
+                    <p>Option 03 - LKR.15000</p>
+                    <p>Option 04 - LKR.13500</p>
+                    <p>Regular / Mid-Level Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">LKR.9000 <span>LKR.15000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/h4.jpg" alt="h4.jpg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>EKHO Saffari - Tissamaharamaya</h3>
+                    <p>Option 01 - LKR.16000</p>
+                    <p>Option 02 - LKR.11500</p>
+                    <p>Option 03 - LKR.19000</p>
+                    <p>Option 04 - LKR.16500</p>
+                    <p>Mid-Level / Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">LKR.11500 <span>LKR.19000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/The%20Grand%20Hotel%20Nuwara.jpeg" alt="The%20Grand%20Hotel%20Nuwara.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>The Grand Hotel NuwaraEliya - Heritage Grand</h3>
+                    <p>Option 01 - LKR.76500</p>
+                    <p>Option 02 - LKR.68000</p>
+                    <p>Option 03 - LKR.81000</p>
+                    <p>Option 04 - LKR.75000</p>
+                    <p>Luxury / Super Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.68000 <span>LKR.81000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/Nine%20Skies,%20Demodara.jpeg" alt="Nine%20Skies,%20Demodara.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Nine Skies Hotel - Demodara</h3>
+                    <p>Option 01 - LKR.77000</p>
+                    <p>Option 02 - LKR.71000</p>
+                    <p>Option 03 - LKR.83000</p>
+                    <p>Option 04 - LKR.79000</p>
+                    <p>Luxury / Super Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.71000 <span>LKR.83000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/etwing%20-%20Negombo.jpeg" alt="etwing%20-%20Negombo.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Jetwing Hotel - Negombo</h3>
+                    <p>Option 01 - LKR.75000</p>
+                    <p>Option 02 - LKR.55000</p>
+                    <p>Option 03 - LKR.91500</p>
+                    <p>Option 04 - LKR.78000</p>
+                    <p>Luxury / Super Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.55000 <span>LKR.91500</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/Malu%20Malu%20Hotel.jpeg" alt="Malu%20Malu%20Hotel.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Malu Malu Hotel - Pasikuda</h3>
+                    <p>Option 01 - LKR.56000</p>
+                    <p>Option 02 - LKR.46000</p>
+                    <p>Option 03 - LKR.79000</p>
+                    <p>Option 04 - LKR.66000</p>
+                    <p>Luxury / Super Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.46000 <span>LKR.79000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/hotels/Light%20House%20Hotel.jpeg" alt="Light%20House%20Hotel.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Light House Hotel - Galle</h3>
+                    <p>Option 01 - LKR.70000</p>
+                    <p>Option 02 - LKR.56000</p>
+                    <p>Option 03 - LKR.85000</p>
+                    <p>Option 04 - LKR.74000</p>
+                    <p>Luxury / Super Luxury Hotel</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.56000 <span>LKR.85000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--hotel section design end-->
+
+    <!--vehicle section design start-->
+    <section class="vehicles" id="vehicles">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>O</span>
+            <span>u</span>
+            <span>r</span>
+            <span class="space"></span>
+            <span>V</span>
+            <span>e</span>
+            <span>h</span>
+            <span>i</span>
+            <span>c</span>
+            <span>l</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/vehicles/Nissan%20Caravan.jpeg" alt="Nissan%20Caravan.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Nissan Caravan</h3>
+                    <p>Mid Range Vehicle</p>
+
+                    <p>Nissan Caravan (D/M) * 4
+                        <p>Fee for Day (100km/day) - LKR.20000</p>
+                        <p>Fee for 1km - LKR.250</p>
+                        <p>Seating Capacity(Exclude driver) - 12</p>
+                        <p>Fuel Consumption (km/l) - 12</p>
+                    </p>
+
+                    <p>Nissan Caravan (D/A) * 1
+                        <p>Fee for Day (100km/day) - LKR.25000</p>
+                        <p>Fee for 1km - LKR.280</p>
+                        <p>Seating Capacity(Exclude driver) - 9</p>
+                        <p>Fuel Consumption (km/l) - 11</p>
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">LKR.20000 <span>LKR.25000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/vehicles/Suzuki%20Celerio.jpeg" alt="Suzuki%20Celerio.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Suzuki Celerio</h3>
+                    <p>Economy Vehicle</p>
+
+                    <p>Suzuki Celerio (P/M) * 1
+                        <p>Fee for Day (100km/day) - LKR.4500</p>
+                        <p>Fee for 1km - LKR.95</p>
+                        <p>Seating Capacity(Exclude driver) - 4</p>
+                        <p>Fuel Consumption (km/l) - 22</p>
+                    </p>
+
+                    <p>Suzuki Celerio (P/A) * 4
+                        <p>Fee for Day (100km/day) - LKR.5000</p>
+                        <p>Fee for 1km - LKR.100</p>
+                        <p>Seating Capacity(Exclude driver) - 4</p>
+                        <p>Fuel Consumption (km/l) - 20</p>
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">LKR.4500 <span>LKR.5000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/vehicles/Toyota%20Alphard.jpeg" alt="Toyota%20Alphard.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Toyota Alphard</h3>
+                    <p>Super Luxury Vehicle</p>
+
+                    <p>Toyota Alphard - (D/A) - Hybrid * 2
+                        <p>Fee for Day (100km/day) - LKR.65000</p>
+                        <p>Fee for 1km - LKR.650</p>
+                        <p>Seating Capacity(Exclude driver) - 7</p>
+                        <p>Fuel Consumption (km/l) - 10</p>
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.65000 <span>LKR.70000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/vehicles/Toyota%20Coaster.jpeg" alt="Toyota%20Coaster.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Toyota Coaster</h3>
+                    <p>Luxury Vehicle</p>
+
+                    <p>Toyota Coaster - (D/M) * 5
+                        <p>Fee for Day (100km/day) - LKR.50000</p>
+                        <p>Fee for 1km - LKR.500</p>
+                        <p>Seating Capacity(Exclude driver) - 30</p>
+                        <p>Fuel Consumption (km/l) - 7</p>
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">LKR.50000 <span>LKR.55000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/vehicles/Toyota%20Yaris.jpeg" alt="Toyota%20Yaris.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Toyota Yaris</h3>
+                    <p>Mid Range Vehicle</p>
+
+                    <p>Toyota Yaris (P/A) * 2
+                    <p>Fee for Day (100km/day) - LKR.8500</p>
+                        <p>Fee for 1km - LKR.180</p>
+                        <p>Seating Capacity(Exclude driver) - 4</p>
+                        <p>Fuel Consumption (km/l) - 15</p>
+                    </p>
+
+                    <p>Toyota Yaris (P/M) * 3
+                        <p>Fee for Day (100km/day) - LKR.8000</p>
+                        <p>Fee for 1km - LKR.175</p>
+                        <p>Seating Capacity(Exclude driver) - 4</p>
+                        <p>Fuel Consumption (km/l) - 16</p>
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">LKR.8000 <span>LKR.8500</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="assets/images/vehicles/Toyota%20Prado%20-%20VX%20-V8.jpeg" alt="Toyota%20Prado%20-%20VX%20-V8.jpeg">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Toyota Prado -VX-V8</h3>
+                    <p>Super Luxury Vehicle</p>
+
+                    <p>Toyota Prado - VX -V8 (D/A) * 2
+                    <p>Fee for Day (100km/day) - LKR.95000</p>
+                        <p>Fee for 1km - LKR.900</p>
+                        <p>Seating Capacity(Exclude driver) - 6</p>
+                        <p>Fuel Consumption (km/l) - 7</p>
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">LKR.95000 <span>LKR.100000</span></div>
+                    <a href="#" class="submitBtn">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--vehicle section design end-->
+
+    <!--book section design start-->
+    <section class="book" id="book">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>B</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>T</span>
+            <span>r</span>
+            <span>a</span>
+            <span>v</span>
+            <span>e</span>
+            <span>l</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image" data-aos="fade-right">
+                <img src="assets/images/logo/map-of-sri-lanka.jpg" alt="map-of-sri-lanka.jpg">
+            </div>
+
+            <form action="" data-aos="fade-left">
+
+                <div class="inputBox">
+                    <h3>Where to</h3>
+                    <input type="text" placeholder="Place Name">
+                </div>
+
+                <div class="inputBox">
+                    <h3>How many</h3>
+                    <input type="number" placeholder="Number of Guests">
+                </div>
+
+                <div class="inputBox">
+                    <h3>Date of Arrivals</h3>
+                    <input type="date">
+                </div>
+
+                <div class="inputBox">
+                    <h3>Date of Leaving</h3>
+                    <input type="date">
+                </div>
+
+                <input type="submit" class="submitBtn" value="book now">
+
+            </form>
+        </div>
+    </section>
+    <!--book section design end-->
+
+    <!--contact section design start-->
+    <section class="contact" id="contact">
+
+        <h1 class="heading"  data-aos="zoom-in">
+            <span>C</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+            <span class="space"></span>
+            <span>U</span>
+            <span>s</span>
+        </h1>
+        
+        <div class="row">
+
+            <div class="image" data-aos="fade-right">
+                <img src="assets/images/logo/contactUs.jpg" alt="contactUs.jpg">
+            </div>
+
+            <form action="" data-aos="fade-left">
+
+                <div class="inputBox">
+                    <input type="text" placeholder="Enter your Name">
+                    <input type="email" placeholder="Enter your Email Address">
+                </div>
+
+                <div class="inputBox">
+                    <input type="number" placeholder="Enter your MobileNo">
+                    <input type="text" placeholder="Enter your Subject">
+                </div>
+                <textarea placeholder="Enter your Message" name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit" class="submitBtn" value="send message">
+            </form>
+        </div>
+
+    </section>
+    <!--contact section design end-->
+
+    <!--footer section design start-->
+    <section class="footer" id="footer" data-aos="zoom-in-down">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About Us</h3>
+                <p>Next Travel Pvt Ltd. is a company that plans travel specializing in a local scale. They have 30 registered
+                    hotels and 60 registered vehicles to offer better services. These services are exposed as packagebased, and anyone can select one of the packages based on their preferences. The company is popular
+                    in their domain because of their loyal service and gets the huge responsibility for seeking a good place
+                    with transport mechanism for someone's travel.</p>
+            </div>
+
+            <div class="box">
+                <h3>Branch Locations</h3>
+                <a href="#">Sigiriya</a>
+                <a href="#">Kandy</a>
+                <a href="#">Galle</a>
+                <a href="#">Colombo</a>
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Book</a>
+                <a href="#">Packages</a>
+                <a href="#">Services</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <h1 class="credit">&copy;Copyright @ 2023 Created By <span>Kaveen Sewhan</span> | All Rights Reserved!</h1>
+    </section>
+    <!--footer section design end-->
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="assets/jQuery/jQuery.min.js"></script>
+
+    <!--custom js file link-->
+    <script src="js/script.js"></script>
+    <!--<script src="js/pages/spaPage.js"></script>-->
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

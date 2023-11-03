@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Details Form</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="../css/pages/pagesStyles.css">
+
+    <!--boxIcons css file link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--add css bootstrap framework-->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+</head>
+<body>
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo">Travel Planning System (Next Travel Pvt. Ltd - Kalutara)</a>
+
+        <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" placeholder="Search Travel Plans..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_box"></button>
+        </form>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+        <!--profile section design start-->
+        <div class="profile">
+            <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+            <h3>Kaveen Sewhan</h3>
+            <span>Traveler</span>
+            <a href="../user/profile.html" class="btn">View Profile</a>
+            <div class="flex-btn">
+                <a href="../index.html" class="option-btn">Login</a>
+                <a href="../user/register.html" class="option-btn">Registration</a>
+            </div>
+        </div>
+        <!--profile section design end-->
+    </section>
+</header>
+
+<!--side bar section design start-->
+<div class="side-bar">
+
+    <div class="close-side-bar">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="profile">
+        <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+        <h3>Kaveen Sewhan</h3>
+        <span>T00-001</span>
+        <a href="../user/profile.html" class="btn">View Profile</a>
+    </div>
+
+    <div class="navbar">
+        <a href="../user/dashboard.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a href="../pages/customerDetails.html"> <i class="fas fa-user"></i> <span>Customer Details</span> </a>
+        <a href="../pages/packageDetails.html"> <i class="fas fa-hiking"></i> <span>Package Details</span> </a>
+        <a href="../pages/hotelDetails.html"> <i class="fas fa-hotel"></i> <span>Hotel Details</span> </a>
+        <a href="../pages/vehicleDetails.html"> <i class="fas fa-car"></i> <span>Vehicle Details</span> </a>
+        <a href="../pages/guideDetails.html"> <i class="fas fa-bullhorn"></i> <span>Guide Details</span> </a>
+        <a href="../pages/travelBooking.html"> <i class="fas fa-book"></i> <span>Travel Booking</span> </a>
+        <a href="../index.html" class="btn">Logout</a>
+    </div>
+</div>
+<!--side bar section design end-->
+
+<!--Hotel Manage Content-->
+<main id="hotelContent">
+    <section class="container">
+        <div class="rounded-3 p-3" style="background-color: darkgrey; margin-top: 25px; height: 100%; width:100%">
+            <h1 class="text-lg-start mb-3"><i class="fas fa-hotel"></i>Hotel Details Form</h1>
+            <div class="row align-items-start pb-5"></div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelId">Hotel ID :</label>
+                        <input class="form-control" id="txtHotelId" type="text" placeholder="Hotel ID">
+                        <span class="control-error" id="lblHotelID"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelName">Hotel Name :</label>
+                        <input class="form-control" id="txtHotelName" type="text" placeholder="Hotel Name">
+                        <span class="control-error" id="lblHotelName"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelCategory">Hotel Category :</label>
+                        <select name="hotelCategory" id="txtHotelCategory">
+                            <option value="hotelCategory">Select Hotel Category</option>
+                            <option value="regular">Regular Package</option>
+                            <option value="midLevel">Mid-Level Package</option>
+                            <option value="luxury">Luxury Package</option>
+                            <option value="superLuxury">Super Luxury Package</option>
+                        </select>
+                        <span class="control-error" id="lblHotelCategory"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelStarsRate">Hotel Stars Rate :</label>
+                        <select name="hotelStarsRate" id="txtHotelStarsRate">
+                            <option value="hotelStarsRate">Select Hotel Stars Rate</option>
+                            <option value="3stars2">3 Stars & 2 Stars</option>
+                            <option value="3stars4">3 Stars & 4 Stars</option>
+                            <option value="4stars5">4 Stars & 5 Stars</option>
+                            <option value="5stars">5 Stars</option>
+                        </select>
+                        <span class="control-error" id="lblHotelStarsRate"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelRoomType">Hotel Room Type :</label>
+                        <select name="hotelRoomType" id="txtHotelRoomType">
+                            <option value="hotelRoomType">Select Hotel Room Type</option>
+                            <option value="FRDouble">Full Board with A/C Luxury Room – Double</option>
+                            <option value="HRDouble">Half Board with A/C Luxury Room – Double</option>
+                            <option value="FRTriple">Full Board with A/C Luxury Room – Triple</option>
+                            <option value="HRTriple">Half Board with A/C Luxury Room – Triple</option>
+                        </select>
+                        <span class="control-error" id="lblHotelRoomType"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelLocation">Hotel Location :</label>
+                        <input class="form-control" id="txtHotelLocation" type="text" placeholder="Hotel Location">
+                        <span class="control-error" id="lblHotelLocation"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelLocationMap">Hotel Location With Coordinates (Google Map Location):</label>
+                        <input class="form-control" id="txtHotelLocationMap" type="text" placeholder="Hotel Location With Coordinates">
+                        <span class="control-error" id="lblHotelLocationMap"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelContactEmail">Hotel Contact Email :</label>
+                        <input class="form-control" id="txtHotelContactEmail" type="email" placeholder="Hotel Contact Email">
+                        <span class="control-error" id="lblHotelContactEmail"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelContactNo1">Hotel Contact No-01 :</label>
+                        <input class="form-control" id="txtHotelContactNo1" type="number" placeholder="Hotel Contact No-01">
+                        <span class="control-error" id="lblHotelContactNo1"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelContactNo2">Hotel Contact No-02 :</label>
+                        <input class="form-control" id="txtHotelContactNo2" type="number" placeholder="Hotel Contact No-02">
+                        <span class="control-error" id="lblHotelContactNo2"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0">Pets allowed or Not :</label>
+                        <input name="allowedPets" type="radio" value="yes"> Yes
+                        <input name="allowedPets" type="radio" value="no"> No
+                        <span class="control-error" id="lblAllowedPets"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelFee">Hotel Fee :</label>
+                        <input class="form-control" id="txtHotelFee" type="number" placeholder="Hotel Fee">
+                        <span class="control-error" id="lblHotelFee"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0">Cancellation Criteria (Free or Non-Free) :</label>
+                        <input name="cancellationCriteria" type="radio" value="free"> Free
+                        <input name="cancellationCriteria" type="radio" value="non-free"> Non-Free
+                        <span class="control-error" id="lblCancellationCriteria"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtHotelRemarks">Hotel Remarks (any Special Needs, Illnesses, etc.) :</label>
+                        <input class="form-control" id="txtHotelRemarks" type="text" placeholder="Hotel Remarks">
+                        <span class="control-error" id="lblHotelRemarks"></span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button class="btn btn-primary mt-3" data-bs-target="#newHotel"
+                        data-bs-toggle="modal" id="btnSaveHotel">Save Hotel
+                </button>
+                <button class="btn btn-warning mt-3" id="btnGetAllHotels">View All Hotels</button>
+                <button class="btn btn-success mt-3" data-bs-target="#updateHotel"
+                        data-bs-toggle="modal" id="btnUpdateHotel">Update Hotel
+                </button>
+                <button class="btn btn-danger mt-3" data-bs-target="#deleteHotel"
+                        data-bs-toggle="modal" id="btnDeleteHotel">Delete Hotel
+                </button>
+                <button class="btn btn-secondary mt-3" data-bs-target="#clearHotel"
+                        data-bs-toggle="modal" id="btnClearHotel">Clear Hotel
+                </button>
+            </div>
+
+            <h3 id="CustomerDetailsContent" class="text-center lead display-4 m-4 text-black">TRAVEL HOTELS DETAILS</h3>
+            <div class="row align-items-center">
+                <div class="col-12 mt-2">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Hotel ID</th>
+                            <th scope="col">Hotel Name</th>
+                            <th scope="col">Hotel Category</th>
+                            <th scope="col">Hotel Stars Rate</th>
+                            <th scope="col">Hotel Room Type</th>
+                            <th scope="col">Hotel Location</th>
+                            <th scope="col">Hotel Google Map Location</th>
+                            <th scope="col">Hotel Contact Email</th>
+                            <th scope="col">Hotel Contact No-01</th>
+                            <th scope="col">Hotel Contact No-02</th>
+                            <th scope="col">Pets Allowed or Not</th>
+                            <th scope="col">Hotel Fee (Based on the Predefined Options)</th>
+                            <th scope="col">Cancellation Criteria (Free or Non-Free)</th>
+                            <th scope="col">Hotel Remarks</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblHotelDetails">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--footer section design start-->
+<footer class="footer">
+    &copy;Copyright @ 2023 by <span>Kaveen Sewhan</span> | All Rights Reserved!
+</footer>
+<!--footer section design end-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>-->
+
+<script src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+
+<!--custom js file link-->
+<script src="../js/user/dashboard.js"></script>
+</body>
+</html>

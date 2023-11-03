@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="../css/user/dashboard.css">
+
+    <!--boxIcons css file link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo">Travel Planning System (Next Travel Pvt. Ltd - Kalutara)</a>
+
+        <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" placeholder="Search Travel Plans..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_box"></button>
+        </form>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+        <!--profile section design start-->
+        <div class="profile">
+            <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+            <h3>Kaveen Sewhan</h3>
+            <span>Traveler</span>
+            <a href="profile.html" class="btn">View Profile</a>
+            <div class="flex-btn">
+                <a href="login.html" class="option-btn">Login</a>
+                <a href="register.html" class="option-btn">Registration</a>
+            </div>
+        </div>
+        <!--profile section design end-->
+    </section>
+</header>
+
+<!--side bar section design start-->
+<div class="side-bar">
+
+    <div class="close-side-bar">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="profile">
+        <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+        <h3>Kaveen Sewhan</h3>
+        <span>T00-001</span>
+        <a href="profile.html" class="btn">View Profile</a>
+    </div>
+
+    <div class="navbar">
+        <a href="../user/dashboard.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a href="../pages/customerDetails.html"> <i class="fas fa-user"></i> <span>Customer Details</span> </a>
+        <a href="../pages/packageDetails.html"> <i class="fas fa-hiking"></i> <span>Package Details</span> </a>
+        <a href="../pages/hotelDetails.html"> <i class="fas fa-hotel"></i> <span>Hotel Details</span> </a>
+        <a href="../pages/vehicleDetails.html"> <i class="fas fa-car"></i> <span>Vehicle Details</span> </a>
+        <a href="../pages/guideDetails.html"> <i class="fas fa-bullhorn"></i> <span>Guide Details</span> </a>
+        <a href="../pages/travelBooking.html"> <i class="fas fa-book"></i> <span>Travel Booking</span> </a>
+        <a href="../index.html" class="btn">Logout</a>
+    </div>
+</div>
+<!--side bar section design end-->
+
+<!--about us section design start-->
+<section class="about" id="about">
+
+    <h1 class="heading"  data-aos="zoom-in">
+        <span>A</span>
+        <span>b</span>
+        <span>o</span>
+        <span>u</span>
+        <span>t</span>
+        <span class="space"></span>
+        <span>U</span>
+        <span>s</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image" data-aos="fade-right">
+            <img src="../assets/images/logo/travelbook.jpg" alt="travelbook.jpg">
+        </div>
+
+        <div class="content" data-aos="fade-left">
+            <h2>Next Travel Pvt. Ltd - Kalutara</h2>
+            <p>Next Travel Pvt Ltd. is a company that plans travel specializing in a local scale. They have 30 registered
+                hotels and 60 registered vehicles to offer better services. These services are exposed as package based, and anyone can select one of the packages based on their preferences. The company is popular
+                in their domain because of their loyal service and gets the huge responsibility for seeking a good place
+                with transport mechanism for someone's travel. </p>
+            <a href="#" class="submitBtn">Read More</a>
+        </div>
+
+    </div>
+</section>
+<!--about us section design end-->
+
+<!--service section design start-->
+<section class="services" id="services">
+
+    <h1 class="heading"  data-aos="zoom-in">
+        <span>O</span>
+        <span>u</span>
+        <span>r</span>
+        <span class="space"></span>
+        <span>S</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-hotel"></i>
+            <h3>Affordable Hotels</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-utensils"></i>
+            <h3>Food & Drinks</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Safety Guide</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-globe-asia"></i>
+            <h3>Around The Country</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-car"></i>
+            <h3>Fastest Travel</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventures</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab beatae maxime, nulla perspiciatis placeat praesentium quibusdam quo ut vitae.
+                Autem dolores earum in itaque molestias reprehenderit similique tenetur ullam?</p>
+        </div>
+    </div>
+
+</section>
+<!--service section design end-->
+
+<!--travel plans section design start-->
+<section class="pricing" id="pricing">
+
+    <h1 class="heading"  data-aos="zoom-in">
+        <span>O</span>
+        <span>u</span>
+        <span>r</span>
+        <span class="space"></span>
+        <span>T</span>
+        <span>r</span>
+        <span>a</span>
+        <span>v</span>
+        <span>e</span>
+        <span>l</span>
+        <span class="space"></span>
+        <span>P</span>
+        <span>l</span>
+        <span>a</span>
+        <span>n</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container" data-aos="flip-right">
+        <div class="box">
+            <h3>Regular Package</h3>
+            <div class="price">
+                <span class="amount">LKR.25000</span>
+                <span>/More</span>
+            </div>
+            <ul>
+                <li>7 Days</li>
+                <li>Food & Drinks</li>
+                <li>Safety Guide</li>
+                <li>Insurance</li>
+                <li>Economy Vehicle</li>
+                <li>3 Star & 2 Star Hotels</li>
+            </ul>
+            <a href="#" class="submitBtn">Choose Plan</a>
+        </div>
+    </div>
+
+    <div class="box-container" data-aos="flip-right">
+        <div class="box">
+            <h3>Mid-Level Package</h3>
+            <div class="price">
+                <span class="amount">LKR.50000</span>
+                <span>/More</span>
+            </div>
+            <ul>
+                <li>7 Days</li>
+                <li>Food & Drinks</li>
+                <li>Safety Guide</li>
+                <li>Insurance</li>
+                <li>Mid-Range Vehicle</li>
+                <li>3 Star & 4 Star Hotels</li>
+            </ul>
+            <a href="#" class="submitBtn">Choose Plan</a>
+        </div>
+    </div>
+
+    <div class="box-container" data-aos="flip-right">
+        <div class="box">
+            <h3>Luxury Package</h3>
+            <div class="price">
+                <span class="amount">LKR.75000</span>
+                <span>/More</span>
+            </div>
+            <ul>
+                <li>7 Days</li>
+                <li>Food & Drinks</li>
+                <li>Safety Guide</li>
+                <li>Insurance</li>
+                <li>Luxury Vehicle</li>
+                <li>4 Star & 5 Star Hotels</li>
+            </ul>
+            <a href="#" class="submitBtn">Choose Plan</a>
+        </div>
+    </div>
+
+    <div class="box-container" data-aos="flip-right">
+        <div class="box">
+            <h3>Super Luxury Package</h3>
+            <div class="price">
+                <span class="amount">LKR.100000</span>
+                <span>/More</span>
+            </div>
+            <ul>
+                <li>7 Days</li>
+                <li>Food & Drinks</li>
+                <li>Safety Guide</li>
+                <li>Insurance</li>
+                <li>Super Luxury Vehicle</li>
+                <li>5 Star Hotels</li>
+            </ul>
+            <a href="#" class="submitBtn">Choose Plan</a>
+        </div>
+    </div>
+</section>
+<!--travel plans section design end-->
+
+<!--footer section design start-->
+<footer class="footer">
+    &copy;Copyright @ 2023 by <span>Kaveen Sewhan</span> | All Rights Reserved!
+</footer>
+<!--footer section design end-->
+
+
+    <!--custom js file link-->
+    <script src="../js/user/dashboard.js"></script>
+</body>
+</html>

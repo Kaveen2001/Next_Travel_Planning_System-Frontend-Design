@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details Form</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="../css/pages/pagesStyles.css">
+
+    <!--boxIcons css file link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--add css bootstrap framework-->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+</head>
+<body>
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo">Travel Planning System (Next Travel Pvt. Ltd - Kalutara)</a>
+
+        <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" placeholder="Search Travel Plans..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_box"></button>
+        </form>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+        <!--profile section design start-->
+        <div class="profile">
+            <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+            <h3>Kaveen Sewhan</h3>
+            <span>Traveler</span>
+            <a href="../user/profile.html" class="btn">View Profile</a>
+            <div class="flex-btn">
+                <a href="../index.html" class="option-btn">Login</a>
+                <a href="../user/register.html" class="option-btn">Registration</a>
+            </div>
+        </div>
+        <!--profile section design end-->
+    </section>
+</header>
+
+<!--side bar section design start-->
+<div class="side-bar">
+
+    <div class="close-side-bar">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="profile">
+        <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+        <h3>Kaveen Sewhan</h3>
+        <span>T00-001</span>
+        <a href="../user/profile.html" class="btn">View Profile</a>
+    </div>
+
+    <div class="navbar">
+        <a href="../user/dashboard.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a href="../pages/customerDetails.html"> <i class="fas fa-user"></i> <span>Customer Details</span> </a>
+        <a href="../pages/packageDetails.html"> <i class="fas fa-hiking"></i> <span>Package Details</span> </a>
+        <a href="../pages/hotelDetails.html"> <i class="fas fa-hotel"></i> <span>Hotel Details</span> </a>
+        <a href="../pages/vehicleDetails.html"> <i class="fas fa-car"></i> <span>Vehicle Details</span> </a>
+        <a href="../pages/guideDetails.html"> <i class="fas fa-bullhorn"></i> <span>Guide Details</span> </a>
+        <a href="../pages/travelBooking.html"> <i class="fas fa-book"></i> <span>Travel Booking</span> </a>
+        <a href="../index.html" class="btn">Logout</a>
+    </div>
+</div>
+<!--side bar section design end-->
+
+<!--Customer Manage Content-->
+<main id="customerContent">
+    <section class="container">
+        <div class="rounded-3 p-3" style="background-color: darkgrey; margin-top: 25px; height: 100%; width:100%">
+            <h1 class="text-lg-start mb-3"><i class="fas fa-users"></i>Customer Details Form</h1>
+            <div class="row align-items-start pb-5"></div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerId">Customer ID :</label>
+                        <input class="form-control" id="txtCustomerId" type="text" placeholder="Customer ID">
+                        <span class="control-error" id="lblCustomerID"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerName">Customer Name :</label>
+                        <input class="form-control" id="txtCustomerName" type="text" placeholder="Customer Name">
+                        <span class="control-error" id="lblCustomerName"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerNICNo">Customer NIC/Passport No :</label>
+                        <input class="form-control" id="txtCustomerNICNo" type="number" placeholder="Customer NIC/Passport No">
+                        <span class="control-error" id="lblCustomerNICNo"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerNICImage">Customer NIC Scanned Image :</label>
+                        <input class="form-control" id="txtCustomerNICImage" type="file" value="images/*">
+                        <span class="control-error" id="lblCustomerNICImage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerAge">Customer Age :</label>
+                        <input class="form-control" id="txtCustomerAge" type="number" placeholder="Customer Age">
+                        <span class="control-error" id="lblCustomerAge"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="lblCustomerGender">Customer Gender :</label>
+                        <input name="gender" type="radio" value="male"> Male
+                        <input name="gender" type="radio" value="female"> Female
+                        <span class="control-error" id="lblCustomerGender"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerAddress">Customer Address :</label>
+                        <input class="form-control" id="txtCustomerAddress" type="text" placeholder="Customer Address">
+                        <span class="control-error" id="lblCustomerAddress"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerEmailAddress">Customer Contact Email Address :</label>
+                        <input class="form-control" id="txtCustomerEmailAddress" type="email" placeholder="Customer Contact Email Address">
+                        <span class="control-error" id="lblCustomerEmailAddress"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerContactNo">Customer Contact No :</label>
+                        <input class="form-control" id="txtCustomerContactNo" type="tel" placeholder="Customer Contact No">
+                        <span class="control-error" id="lblCustomerContactNo"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerImage">Customer Image :</label>
+                        <input class="form-control" id="txtCustomerImage" type="file" value="images/*">
+                        <span class="control-error" id="lblCustomerImage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtCustomerRemarks">Customer Remarks (any Special Needs, Illnesses, etc.) :</label>
+                        <input class="form-control" id="txtCustomerRemarks" type="text" placeholder="Customer Remarks">
+                        <span class="control-error" id="lblCustomerRemarks"></span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button class="btn btn-primary mt-3" data-bs-target="#newCustomer"
+                        data-bs-toggle="modal" id="btnSaveCustomer" onclick="saveCustomer()">Save Customer
+                </button>
+                <button class="btn btn-warning mt-3" id="btnGetAllCustomers" onclick="getAllCustomers()">View All Customers</button>
+                <button class="btn btn-success mt-3" data-bs-target="#updateCustomer"
+                        data-bs-toggle="modal" id="btnUpdateCustomer" onclick="updateCustomer()">Update Customer
+                </button>
+                <button class="btn btn-danger mt-3" data-bs-target="#deleteCustomer"
+                        data-bs-toggle="modal" id="btnDeleteCustomer" onclick="deleteCustomer()">Delete Customer
+                </button>
+            </div>
+
+            <h3 id="CustomerDetailsContent" class="text-center lead display-4 m-4 text-black">CUSTOMERS DETAILS</h3>
+            <div class="row align-items-center">
+                <div class="col-12 mt-2">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Customer NIC/Passport No</th>
+                            <th scope="col">Customer NIC Scanned Image</th>
+                            <th scope="col">Customer Age</th>
+                            <th scope="col">Customer Gender</th>
+                            <th scope="col">Customer Address</th>
+                            <th scope="col">Customer Contact Email Address</th>
+                            <th scope="col">Customer Contact No</th>
+                            <th scope="col">Customer Image</th>
+                            <th scope="col">Customer Remarks</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblCustomer">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--footer section design start-->
+<footer class="footer">
+    &copy;Copyright @ 2023 by <span>Kaveen Sewhan</span> | All Rights Reserved!
+</footer>
+<!--footer section design end-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>-->
+
+<script src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="../assets/sweetalert/sweetalert2.all.min.js"></script>
+<script src="../assets/jQuery/jQuery.min.js"></script>
+
+<!--custom js file link-->
+<script src="../js/user/dashboard.js"></script>
+
+<script src="../js/model/CustomerModel.js"></script>
+<script src="../js/controller/CustomerController.js"></script>
+</body>
+</html>

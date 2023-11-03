@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Details Form</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="../css/pages/pagesStyles.css">
+
+    <!--boxIcons css file link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--add css bootstrap framework-->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+</head>
+<body>
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo">Travel Planning System (Next Travel Pvt. Ltd - Kalutara)</a>
+
+        <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" placeholder="Search Travel Plans..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_box"></button>
+        </form>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+        <!--profile section design start-->
+        <div class="profile">
+            <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+            <h3>Kaveen Sewhan</h3>
+            <span>Traveler</span>
+            <a href="../user/profile.html" class="btn">View Profile</a>
+            <div class="flex-btn">
+                <a href="../index.html" class="option-btn">Login</a>
+                <a href="../user/register.html" class="option-btn">Registration</a>
+            </div>
+        </div>
+        <!--profile section design end-->
+    </section>
+</header>
+
+<!--side bar section design start-->
+<div class="side-bar">
+
+    <div class="close-side-bar">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="profile">
+        <img src="../assets/images/profile/Kaveen.jpg" alt="Kaveen.jpg">
+        <h3>Kaveen Sewhan</h3>
+        <span>T00-001</span>
+        <a href="../user/profile.html" class="btn">View Profile</a>
+    </div>
+
+    <div class="navbar">
+        <a href="../user/dashboard.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a href="../pages/customerDetails.html"> <i class="fas fa-user"></i> <span>Customer Details</span> </a>
+        <a href="../pages/packageDetails.html"> <i class="fas fa-hiking"></i> <span>Package Details</span> </a>
+        <a href="../pages/hotelDetails.html"> <i class="fas fa-hotel"></i> <span>Hotel Details</span> </a>
+        <a href="../pages/vehicleDetails.html"> <i class="fas fa-car"></i> <span>Vehicle Details</span> </a>
+        <a href="../pages/guideDetails.html"> <i class="fas fa-bullhorn"></i> <span>Guide Details</span> </a>
+        <a href="../pages/travelBooking.html"> <i class="fas fa-book"></i> <span>Travel Booking</span> </a>
+        <a href="../index.html" class="btn">Logout</a>
+    </div>
+</div>
+<!--side bar section design end-->
+
+<!--Guide Manage Content-->
+<main id="guiderContent">
+    <section class="container">
+        <div class="rounded-3 p-3" style="background-color: darkgrey; margin-top: 25px; height: 100%; width:100%">
+            <h1 class="text-lg-start mb-3"><i class="fas fa-bullhorn"></i>Guide Details Form</h1>
+            <div class="row align-items-start pb-5"></div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideId">Guide ID :</label>
+                        <input class="form-control" id="txtGuideId" type="text" placeholder="Guide ID">
+                        <span class="control-error" id="lblGuideID"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideName">Guide Name :</label>
+                        <input class="form-control" id="txtGuideName" type="text" placeholder="Guide Name">
+                        <span class="control-error" id="lblGuideName"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideAddress">Guide Address :</label>
+                        <input class="form-control" id="txtGuideAddress" type="text" placeholder="Guide Address">
+                        <span class="control-error" id="lblGuideAddress"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideAge">Guide Age :</label>
+                        <input class="form-control" id="txtGuideAge" type="number" placeholder="Guide Age">
+                        <span class="control-error" id="lblGuideAge"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0">Guide Gender :</label>
+                        <input name="genderMale" type="radio" value="male"> Male
+                        <input name="genderMale" type="radio" value="female"> Female
+                        <span class="control-error" id="lblGuideGender"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideContactNo">Guide Contact No :</label>
+                        <input class="form-control" id="txtGuideContactNo" type="tel" placeholder="Guide Contact No">
+                        <span class="control-error" id="lblGuideContactNo"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideImage">Guide Image :</label>
+                        <input class="form-control" id="txtGuideImage" type="file" value="images/*">
+                        <span class="control-error" id="lblGuideImage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideNICImage">Guide NIC Scanned Image :</label>
+                        <input class="form-control" id="txtGuideNICImage" type="file" value="images/*">
+                        <span class="control-error" id="lblGuideNICImage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideIDImage">Guide ID Scanned Image :</label>
+                        <input class="form-control" id="txtGuideIDImage" type="file" value="images/*">
+                        <span class="control-error" id="lblGuideIDImage"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideExperience">Guide Experience :</label>
+                        <input class="form-control" id="txtGuideExperience" type="text" placeholder="Guide Experience">
+                        <span class="control-error" id="lblGuideExperience"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideManDayValue">Guide Man-Day Value :</label>
+                        <input class="form-control" id="txtGuideManDayValue" type="number" placeholder="Guide Man-Day Value">
+                        <span class="control-error" id="lblGuideManDayValue"></span>
+                    </div>
+
+                    <div class="ms-3 me-5 pb-3">
+                        <label class="form-label fw-bold mb-0" for="txtGuideRemarks">Guide Remarks (any Special Needs, Illnesses, etc.) :</label>
+                        <input class="form-control" id="txtGuideRemarks" type="text" placeholder="Guide Remarks">
+                        <span class="control-error" id="lblGuideRemarks"></span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button class="btn btn-primary mt-3" data-bs-target="#newGuide"
+                        data-bs-toggle="modal" id="btnSaveGuide">Save Guide
+                </button>
+                <button class="btn btn-warning mt-3" id="btnGetAllGuides">View All Guides</button>
+                <button class="btn btn-success mt-3" data-bs-target="#updateGuide"
+                        data-bs-toggle="modal" id="btnUpdateGuide">Update Guide
+                </button>
+                <button class="btn btn-danger mt-3" data-bs-target="#deleteGuide"
+                        data-bs-toggle="modal" id="btnDeleteGuide">Delete Guide
+                </button>
+                <button class="btn btn-secondary mt-3" data-bs-target="#clearGuide"
+                        data-bs-toggle="modal" id="btnClearGuide">Clear Guide
+                </button>
+            </div>
+
+            <h3 id="CustomerDetailsContent" class="text-center lead display-4 m-4 text-black">GUIDE DETAILS</h3>
+            <div class="row align-items-center">
+                <div class="col-12 mt-2">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Guide ID</th>
+                            <th scope="col">Guide Name</th>
+                            <th scope="col">Guide Address</th>
+                            <th scope="col">Guide Age</th>
+                            <th scope="col">Guide Gender</th>
+                            <th scope="col">Guide Contact No</th>
+                            <th scope="col">Guide Image</th>
+                            <th scope="col">Guide NIC Scanned Image</th>
+                            <th scope="col">Guide ID Scanned Image</th>
+                            <th scope="col">Guide Experience</th>
+                            <th scope="col">Guide Man-Day Value</th>
+                            <th scope="col">Guide Remarks</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblGuide">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--footer section design start-->
+<footer class="footer">
+    &copy;Copyright @ 2023 by <span>Kaveen Sewhan</span> | All Rights Reserved!
+</footer>
+<!--footer section design end-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>-->
+
+<script src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+
+<!--custom js file link-->
+<script src="../js/user/dashboard.js"></script>
+</body>
+</html>

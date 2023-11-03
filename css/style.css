@@ -1,0 +1,898 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap');
+
+:root {
+    --orange:#ffa500;
+    --blue:#0b4db8;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--orange);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 300rem;
+}
+
+/* header section design start */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: none;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: var(--orange);
+}
+
+header .navbar a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 .8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+#menu-bar {
+    color: #fff;
+    border: .1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+header .content {
+    margin: 0 -11.2rem;;
+    padding-right: 1rem;
+}
+
+header .content .loginBtn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #ffa500;
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid #ffa500;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+header .content .loginBtn:hover {
+    background: rgba(255,165,0,.2);
+    color: #ffa500;
+}
+/* header section design end */
+
+.submitBtn {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+
+.submitBtn:hover {
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+}
+
+/* login form section design start */
+.wrapper {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: -1px 0 10px rgba(0,0,0,.2);
+    border-left: 2px solid rgba(255,255,255,.1);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper .logreg-box {
+    width: 100%;
+}
+
+.wrapper .logreg-box .logreg-title {
+    text-align: center;
+    margin-bottom: -25px;
+    color: #fff;
+}
+
+.logreg-title h2 {
+    font-size: 32px;
+}
+
+.logreg-title p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logreg-box .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    padding-right: 25px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 19px;
+    color: #fff;
+}
+
+.input-box input:focus~label,.input-box input:valid~label {
+    top: -5px;
+}
+
+.logreg-box .remember-forgot {
+    font-size: 14.5px;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color:#fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.logreg-box .logBtn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    cursor: pointer;
+    font-size: 16px;
+    color: #222;
+    font-weight: 600;
+}
+
+.logreg-box .logreg-link {
+    font-size: 14.5px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 15px;
+}
+
+.logreg-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logreg-link p a:hover {
+    text-decoration: underline;
+}
+
+.media-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.media-options a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    border-radius: 40px;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.media-options a i {
+    font-size: 22px;
+    margin: 0 8px 1.5px 0;
+}
+
+.media-options a span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.media-options a:hover {
+    background: rgba(255,255,255,.1);
+}
+/* login form section design end */
+
+/* register form section design start */
+.wrapper .form-box-login {
+    display: block;
+}
+
+.wrapper.active .form-box-login {
+    display: none;
+}
+
+.wrapper .form-box-register {
+    display: none;
+}
+
+.wrapper.active .form-box-register {
+    display: block;
+}
+
+.icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+}
+
+.icon-close i {
+    font-size: 32px;
+    color: #333;
+}
+
+.wrapper.active-popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* register form section design end */
+
+/* home section design start */
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    color: #ffa500;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.home .content p {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .5rem 0;
+    text-transform: none;
+}
+
+.home .video-container video {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .content .btn {
+    display: inline-block;
+    margin-top: 20rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: .5s ease;
+    animation: heartbeat 1s infinite;
+}
+
+.home .content .btn:hover {
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.75);
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.75);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(0.75);
+    }
+}
+/* home section design end */
+
+/* about us section design start */
+.about .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about .row .content h2 {
+    font-size: 22px;
+    color: var(--orange);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about .row .content p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #222;
+    margin-bottom: 35px;
+}
+/* about us section design end */
+
+/* travel plan section design start */
+.pricing .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;*/
+}
+
+.pricing .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    text-align: center;
+    padding: 2rem;
+
+   /* background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    padding: 2rem;
+    gap: 3rem;*/
+}
+
+.pricing .box-container .box h3 {
+    padding: 1rem;
+    font-size: 2rem;
+    background: #222;
+    color: #fff;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.pricing .box-container .box .price {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.pricing .box-container .box .price span {
+    font-size: 2rem;
+    color: #333;
+}
+
+.pricing .box-container .box .price .amount {
+    font-size: 5rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.pricing .box-container .box ul {
+    padding: .5rem 0;
+    list-style: none;
+    text-align: center;
+}
+
+.pricing .box-container .box ul li {
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    color: #333;
+    text-align: center;
+}
+/* travel plan section design end */
+
+/* book section design start */
+.heading {
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+    display: inline-block;
+}
+
+.heading span .space {
+    background: none;
+}
+
+.book .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.book .row .image {
+    flex: 1 1 40rem;
+}
+
+.book .row .image img {
+    width: 100%;
+}
+
+.book .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.book .row form .inputBox {
+    padding: .5rem 0;
+}
+
+.book .row form .inputBox input {
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+
+.book .row form .inputBox h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #666;
+}
+/* book section design end */
+
+/* hotel section design start */
+.hotels .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hotels .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.hotels .box-container .box img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hotels .box-container .box .content {
+    padding: 2rem;
+}
+
+.hotels .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.hotels .box-container .box .content h3 i {
+    color: var(--orange);
+}
+
+.hotels .box-container .box .content p {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.hotels .box-container .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--orange);
+}
+
+.hotels .box-container .box .content .price {
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.hotels .box-container .box .content .price span {
+    color: #666;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+/* hotel section design end */
+
+/* vehicle section design start */
+.vehicles .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.vehicles .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.vehicles .box-container .box img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.vehicles .box-container .box .content {
+    padding: 2rem;
+}
+
+.vehicles .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.vehicles .box-container .box .content h3 i {
+    color: var(--orange);
+}
+
+.vehicles .box-container .box .content p {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.vehicles .box-container .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--orange);
+}
+
+.vehicles .box-container .box .content .price {
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.vehicles .box-container .box .content .price span {
+    color: #666;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+/* vehicle section design end */
+
+/* services section design start */
+.services .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.services .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.services .box-container .box i {
+    padding: 1rem;
+    font-size: 5rem;
+    color: var(--orange);
+}
+
+.services .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.services .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.services .box-container .box:hover {
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+/* services section design end */
+
+/* gallery section design start */
+.gallery .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.gallery .box-container .box {
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border: 1rem solid #fff;
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+}
+
+.gallery .box-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box .content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,.7);
+    padding-top: 1rem;
+}
+
+.gallery .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+
+.gallery .box-container .box .content p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: .5rem 0;
+}
+
+.gallery .box-container .box:hover .content {
+    top: 0;
+}
+
+.seeMoreBtn {
+    display: inline-block;
+    margin-top: .1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.seeMoreBtn:hover {
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+}
+/* gallery section design end */
+
+/* contact section design start */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .image {
+    flex: 1 1 35rem;
+}
+
+.contact .row .image img {
+    width: 100%;
+}
+
+.contact .row form {
+    flex: 1 1 50rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.contact .row form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .row form .inputBox input, .contact .row form textarea {
+    width: 49%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    background: #f7f7f7;
+    text-transform: none;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+/* contact section design end */
+
+/* footer section design start */
+.footer {
+    background: #333;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    color: #fff;
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span {
+    color: var(--orange);
+}
+/* footer section design end */
